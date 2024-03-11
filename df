@@ -1,0 +1,91 @@
+[1mdiff --git a/.gitignore b/.gitignore[m
+[1mdeleted file mode 100644[m
+[1mindex 74f029d..0000000[m
+[1m--- a/.gitignore[m
+[1m+++ /dev/null[m
+[36m@@ -1,71 +0,0 @@[m
+[31m-# Compiled class file[m
+[31m-*.class[m
+[31m-[m
+[31m-# Log file[m
+[31m-*.log[m
+[31m-[m
+[31m-# BlueJ files[m
+[31m-*.ctxt[m
+[31m-[m
+[31m-# Mobile Tools for Java (J2ME)[m
+[31m-.mtj.tmp/[m
+[31m-[m
+[31m-# Package Files #[m
+[31m-*.jar[m
+[31m-*.war[m
+[31m-*.nar[m
+[31m-*.ear[m
+[31m-*.zip[m
+[31m-*.tar.gz[m
+[31m-*.rar[m
+[31m-[m
+[31m-*.class[m
+[31m-[m
+[31m-# Merge Files[m
+[31m-*.bak[m
+[31m-[m
+[31m-# Mobile Tools for Java (J2ME)[m
+[31m-.mtj.tmp/[m
+[31m-[m
+[31m-#Gradle temporary files[m
+[31m-target/[m
+[31m-.mvn/[m
+[31m-.gradle[m
+[31m-**/build/[m
+[31m-!src/**/build/[m
+[31m-[m
+[31m-# Ignore Gradle GUI config[m
+[31m-gradle-app.setting[m
+[31m-[m
+[31m-# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)[m
+[31m-!gradle-wrapper.jar[m
+[31m-[m
+[31m-# Avoid ignore Gradle wrappper properties[m
+[31m-!gradle-wrapper.properties[m
+[31m-[m
+[31m-# Cache of project[m
+[31m-.gradletasknamecache[m
+[31m-[m
+[31m-# Eclipse Gradle plugin generated files[m
+[31m-# Eclipse Core[m
+[31m-.project[m
+[31m-# JDT-specific (Eclipse Java Development Tools)[m
+[31m-.classpath[m
+[31m-[m
+[31m-#Eclipse files[m
+[31m-**/.project[m
+[31m-**/.classpath[m
+[31m-**/.factorypath[m
+[31m-**/.settings/[m
+[31m-blog/bin/[m
+[31m-**/.tern-project[m
+[31m-[m
+[31m-#IntelliJ files[m
+[31m-**/*.iml[m
+[31m-**/.idea[m
+[31m-**/.gradle[m
+[31m-HELP.md[m
+[31m-mvnw.cmd[m
+[31m-[m
+[31m-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml[m
+[31m-hs_err_pid*[m
+[1mdiff --git a/FirstStepsInKotlinWithSpringBoot/rest-with-spring-boot-and-kotlin/src/main/kotlin/com/hotmail/ma_adamo/GreetingController.kt b/FirstStepsInKotlinWithSpringBoot/rest-with-spring-boot-and-kotlin/src/main/kotlin/com/hotmail/ma_adamo/GreetingController.kt[m
+[1mindex 3ad04ee..548c83d 100644[m
+[1m--- a/FirstStepsInKotlinWithSpringBoot/rest-with-spring-boot-and-kotlin/src/main/kotlin/com/hotmail/ma_adamo/GreetingController.kt[m
+[1m+++ b/FirstStepsInKotlinWithSpringBoot/rest-with-spring-boot-and-kotlin/src/main/kotlin/com/hotmail/ma_adamo/GreetingController.kt[m
+[36m@@ -10,7 +10,7 @@[m [mclass GreetingController {[m
+ [m
+     val counter: AtomicLong = AtomicLong()[m
+     @RequestMapping("/greeting")[m
+[31m-    fun greeting(@RequestParam(value="name", defaultValue = "World") name: String?): Greeting{[m
+[32m+[m[32m    fun greeting(@RequestParam(value="name", defaultValue = "TESTE GIT") name: String?): Greeting{[m
+         return Greeting(counter.incrementAndGet(), "Hello, $name!")[m
+     }[m
+ }[m
+\ No newline at end of file[m
