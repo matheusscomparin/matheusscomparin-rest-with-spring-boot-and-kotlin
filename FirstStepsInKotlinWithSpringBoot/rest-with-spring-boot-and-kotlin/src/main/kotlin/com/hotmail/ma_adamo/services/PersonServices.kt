@@ -1,8 +1,10 @@
 package com.hotmail.ma_adamo.services
 
 import com.hotmail.ma_adamo.data.vo.v1.PersonVO
+import com.hotmail.ma_adamo.data.vo.v2.PersonVO as PersonVOV2
 import com.hotmail.ma_adamo.exceptions.ResourceNotFoundException
 import com.hotmail.ma_adamo.mapper.DozerMapper
+import com.hotmail.ma_adamo.mapper.custom.PersonMapper
 import com.hotmail.ma_adamo.model.Person
 import com.hotmail.ma_adamo.repository.PersonRepository
 import org.springframework.beans.factory.annotation.Autowired
@@ -14,6 +16,9 @@ class PersonServices {
 
     @Autowired
     private lateinit var repository: PersonRepository
+
+    @Autowired
+    private lateinit var mapper: PersonMapper
 
     private val logger = Logger.getLogger(PersonServices::class.java.name)
 
@@ -35,6 +40,14 @@ class PersonServices {
         var entity: Person = DozerMapper.parseObject(person, Person::class.java)
         return DozerMapper.parseObject(repository.save(entity), PersonVO::class.java)
     }
+
+    // Versionando endpoint
+    /*
+    fun createV2(person: PersonVOV2) : PersonVOV2{
+        logger.info("Creating one person with name ${person.firstName}")
+        var entity: Person = mapper.mapVOToEntity(person)
+        return mapper.mapEntityToV0(repository.save(entity))
+    }*/
 
     fun update(person: PersonVO) : PersonVO{
         logger.info("Updating one person with id ${person.id}")
