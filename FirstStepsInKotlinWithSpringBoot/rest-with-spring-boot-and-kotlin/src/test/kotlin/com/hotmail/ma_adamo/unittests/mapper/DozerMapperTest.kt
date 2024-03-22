@@ -1,9 +1,9 @@
-package br.com.erudio.unittests.mapper
+package com.hotmail.ma_adamo.unittests.mapper
 
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
-import br.com.erudio.unittests.mapper.mocks.MockPerson
+import com.hotmail.ma_adamo.unittests.mapper.mocks.MockPerson
 import com.hotmail.ma_adamo.data.vo.v1.PersonVO
 import com.hotmail.ma_adamo.mapper.DozerMapper
 import com.hotmail.ma_adamo.model.Person

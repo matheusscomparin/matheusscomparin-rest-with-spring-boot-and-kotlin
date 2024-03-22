@@ -15,9 +15,9 @@ data class BookVO (
 
     var author: String = "",
 
-    var launchDate: Date,
+    var launchDate: Date? = null,
 
-    var price: Double,
+    var price: Double = 0.0,
 
     var title: String = ""
 ) : RepresentationModel<BookVO>()

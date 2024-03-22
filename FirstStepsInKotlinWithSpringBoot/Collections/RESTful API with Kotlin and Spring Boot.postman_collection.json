@@ -1,0 +1,2633 @@
+{
+	"info": {
+		"_postman_id": "16653ab2-82a1-4bf1-8e03-aa09e25556dc",
+		"name": "RESTful API with Kotlin and Spring Boot",
+		"description": "Description",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33526847"
+	},
+	"item": [
+		{
+			"name": "person",
+			"item": [
+				{
+					"name": "v1",
+					"item": [
+						{
+							"name": "Finds all People",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/person/v1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"person",
+										"v1"
+									]
+								},
+								"description": "Finds all People"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/person/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person",
+												"v1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"address\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"id\": \"<long>\",\n    \"lastName\": \"<string>\",\n    \"_links\": {\n      \"tempor_720\": {\n        \"href\": \"<string>\",\n        \"hreflang\": \"<string>\",\n        \"title\": \"<string>\",\n        \"type\": \"<string>\",\n        \"deprecation\": \"<string>\",\n        \"profile\": \"<string>\",\n        \"name\": \"<string>\",\n        \"templated\": \"<boolean>\"\n      },\n      \"ipsum_46\": {\n        \"href\": \"<string>\",\n        \"hreflang\": \"<string>\",\n        \"title\": \"<string>\",\n        \"type\": \"<string>\",\n        \"deprecation\": \"<string>\",\n        \"profile\": \"<string>\",\n        \"name\": \"<string>\",\n        \"templated\": \"<boolean>\"\n      },\n      \"ut63\": {\n        \"href\": \"<string>\",\n        \"hreflang\": \"<string>\",\n        \"title\": \"<string>\",\n        \"type\": \"<string>\",\n        \"deprecation\": \"<string>\",\n        \"profile\": \"<string>\",\n        \"name\": \"<string>\",\n        \"templated\": \"<boolean>\"\n      }\n    }\n  },\n  {\n    \"address\": \"<string>\",\n    \"firstName\": \"<string>\",\n    \"gender\": \"<string>\",\n    \"id\": \"<long>\",\n    \"lastName\": \"<string>\",\n    \"_links\": {\n      \"eue\": {\n        \"href\": \"<string>\",\n        \"hreflang\": \"<string>\",\n        \"title\": \"<string>\",\n        \"type\": \"<string>\",\n        \"deprecation\": \"<string>\",\n        \"profile\": \"<string>\",\n        \"name\": \"<string>\",\n        \"templated\": \"<boolean>\"\n      }\n    }\n  }\n]"
+								},
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/person/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person",
+												"v1"
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/person/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person",
+												"v1"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/person/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person",
+												"v1"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/person/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person",
+												"v1"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Internal Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/person/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person",
+												"v1"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						},
+						{
+							"name": "Updates a person's information",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"address\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"id\": \"<long>\",\n  \"lastName\": \"<string>\",\n  \"_links\": {\n    \"minim14\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/person/v1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"person",
+										"v1"
+									]
+								},
+								"description": "Updates a person's information"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"address\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"id\": \"<long>\",\n  \"lastName\": \"<string>\",\n  \"_links\": {\n    \"minim14\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/person/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person",
+												"v1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"address\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"id\": \"<long>\",\n  \"lastName\": \"<string>\",\n  \"_links\": {\n    \"minim14\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}"
+								},
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"address\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"id\": \"<long>\",\n  \"lastName\": \"<string>\",\n  \"_links\": {\n    \"minim14\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/person/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person",
+												"v1"
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"address\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"id\": \"<long>\",\n  \"lastName\": \"<string>\",\n  \"_links\": {\n    \"minim14\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/person/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person",
+												"v1"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"address\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"id\": \"<long>\",\n  \"lastName\": \"<string>\",\n  \"_links\": {\n    \"minim14\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/person/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person",
+												"v1"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"address\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"id\": \"<long>\",\n  \"lastName\": \"<string>\",\n  \"_links\": {\n    \"minim14\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/person/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person",
+												"v1"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Internal Error",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"address\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"id\": \"<long>\",\n  \"lastName\": \"<string>\",\n  \"_links\": {\n    \"minim14\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/person/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person",
+												"v1"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						},
+						{
+							"name": "Adds a new Person",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"address\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"id\": \"<long>\",\n  \"lastName\": \"<string>\",\n  \"_links\": {\n    \"minim14\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/person/v1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"person",
+										"v1"
+									]
+								},
+								"description": "Adds a new Person"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"address\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"id\": \"<long>\",\n  \"lastName\": \"<string>\",\n  \"_links\": {\n    \"minim14\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/person/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person",
+												"v1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"address\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"id\": \"<long>\",\n  \"lastName\": \"<string>\",\n  \"_links\": {\n    \"minim14\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}"
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"address\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"id\": \"<long>\",\n  \"lastName\": \"<string>\",\n  \"_links\": {\n    \"minim14\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/person/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person",
+												"v1"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"address\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"id\": \"<long>\",\n  \"lastName\": \"<string>\",\n  \"_links\": {\n    \"minim14\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/person/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person",
+												"v1"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Internal Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"address\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"id\": \"<long>\",\n  \"lastName\": \"<string>\",\n  \"_links\": {\n    \"minim14\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/person/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person",
+												"v1"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						},
+						{
+							"name": "Finds a Person",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/person/v1/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"person",
+										"v1",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<long>",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "Finds a Person"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/person/v1/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person",
+												"v1",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"address\": \"<string>\",\n  \"firstName\": \"<string>\",\n  \"gender\": \"<string>\",\n  \"id\": \"<long>\",\n  \"lastName\": \"<string>\",\n  \"_links\": {\n    \"minim14\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}"
+								},
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/person/v1/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person",
+												"v1",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/person/v1/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person",
+												"v1",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/person/v1/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person",
+												"v1",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/person/v1/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person",
+												"v1",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Internal Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/person/v1/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person",
+												"v1",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						},
+						{
+							"name": "Deletes a Person",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/person/v1/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"person",
+										"v1",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<long>",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "Deletes a Person"
+							},
+							"response": [
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/person/v1/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person",
+												"v1",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/person/v1/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person",
+												"v1",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/person/v1/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person",
+												"v1",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/person/v1/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person",
+												"v1",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Internal Error",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/person/v1/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"person",
+												"v1",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "v1",
+					"item": [
+						{
+							"name": "Finds all Books",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/Book/v1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Book",
+										"v1"
+									]
+								},
+								"description": "Finds all Books"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Book/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Book",
+												"v1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "[\n  {\n    \"author\": \"<string>\",\n    \"id\": \"<long>\",\n    \"price\": \"<double>\",\n    \"title\": \"<string>\",\n    \"launchDate\": \"<dateTime>\",\n    \"_links\": {\n      \"incididunt_d\": {\n        \"href\": \"<string>\",\n        \"hreflang\": \"<string>\",\n        \"title\": \"<string>\",\n        \"type\": \"<string>\",\n        \"deprecation\": \"<string>\",\n        \"profile\": \"<string>\",\n        \"name\": \"<string>\",\n        \"templated\": \"<boolean>\"\n      }\n    }\n  },\n  {\n    \"author\": \"<string>\",\n    \"id\": \"<long>\",\n    \"price\": \"<double>\",\n    \"title\": \"<string>\",\n    \"launchDate\": \"<dateTime>\",\n    \"_links\": {\n      \"ipsum4dd\": {\n        \"href\": \"<string>\",\n        \"hreflang\": \"<string>\",\n        \"title\": \"<string>\",\n        \"type\": \"<string>\",\n        \"deprecation\": \"<string>\",\n        \"profile\": \"<string>\",\n        \"name\": \"<string>\",\n        \"templated\": \"<boolean>\"\n      },\n      \"consecteturc65\": {\n        \"href\": \"<string>\",\n        \"hreflang\": \"<string>\",\n        \"title\": \"<string>\",\n        \"type\": \"<string>\",\n        \"deprecation\": \"<string>\",\n        \"profile\": \"<string>\",\n        \"name\": \"<string>\",\n        \"templated\": \"<boolean>\"\n      }\n    }\n  }\n]"
+								},
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Book/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Book",
+												"v1"
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Book/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Book",
+												"v1"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Book/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Book",
+												"v1"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Book/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Book",
+												"v1"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Internal Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Book/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Book",
+												"v1"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						},
+						{
+							"name": "Updates a book's information",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"author\": \"<string>\",\n  \"id\": \"<long>\",\n  \"price\": \"<double>\",\n  \"title\": \"<string>\",\n  \"launchDate\": \"<dateTime>\",\n  \"_links\": {\n    \"voluptatea\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    },\n    \"laboris_73\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    },\n    \"dolore_a7b\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/Book/v1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Book",
+										"v1"
+									]
+								},
+								"description": "Updates a book's information"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"author\": \"<string>\",\n  \"id\": \"<long>\",\n  \"price\": \"<double>\",\n  \"title\": \"<string>\",\n  \"launchDate\": \"<dateTime>\",\n  \"_links\": {\n    \"voluptatea\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    },\n    \"laboris_73\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    },\n    \"dolore_a7b\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Book/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Book",
+												"v1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"author\": \"<string>\",\n  \"id\": \"<long>\",\n  \"price\": \"<double>\",\n  \"title\": \"<string>\",\n  \"launchDate\": \"<dateTime>\",\n  \"_links\": {\n    \"voluptatea\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    },\n    \"laboris_73\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    },\n    \"dolore_a7b\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}"
+								},
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"author\": \"<string>\",\n  \"id\": \"<long>\",\n  \"price\": \"<double>\",\n  \"title\": \"<string>\",\n  \"launchDate\": \"<dateTime>\",\n  \"_links\": {\n    \"voluptatea\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    },\n    \"laboris_73\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    },\n    \"dolore_a7b\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Book/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Book",
+												"v1"
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"author\": \"<string>\",\n  \"id\": \"<long>\",\n  \"price\": \"<double>\",\n  \"title\": \"<string>\",\n  \"launchDate\": \"<dateTime>\",\n  \"_links\": {\n    \"voluptatea\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    },\n    \"laboris_73\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    },\n    \"dolore_a7b\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Book/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Book",
+												"v1"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"author\": \"<string>\",\n  \"id\": \"<long>\",\n  \"price\": \"<double>\",\n  \"title\": \"<string>\",\n  \"launchDate\": \"<dateTime>\",\n  \"_links\": {\n    \"voluptatea\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    },\n    \"laboris_73\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    },\n    \"dolore_a7b\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Book/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Book",
+												"v1"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"author\": \"<string>\",\n  \"id\": \"<long>\",\n  \"price\": \"<double>\",\n  \"title\": \"<string>\",\n  \"launchDate\": \"<dateTime>\",\n  \"_links\": {\n    \"voluptatea\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    },\n    \"laboris_73\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    },\n    \"dolore_a7b\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Book/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Book",
+												"v1"
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Internal Error",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"author\": \"<string>\",\n  \"id\": \"<long>\",\n  \"price\": \"<double>\",\n  \"title\": \"<string>\",\n  \"launchDate\": \"<dateTime>\",\n  \"_links\": {\n    \"voluptatea\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    },\n    \"laboris_73\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    },\n    \"dolore_a7b\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Book/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Book",
+												"v1"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						},
+						{
+							"name": "Adds a new Book",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"author\": \"<string>\",\n  \"id\": \"<long>\",\n  \"price\": \"<double>\",\n  \"title\": \"<string>\",\n  \"launchDate\": \"<dateTime>\",\n  \"_links\": {\n    \"voluptatea\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    },\n    \"laboris_73\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    },\n    \"dolore_a7b\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/Book/v1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Book",
+										"v1"
+									]
+								},
+								"description": "Adds a new Book"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"author\": \"<string>\",\n  \"id\": \"<long>\",\n  \"price\": \"<double>\",\n  \"title\": \"<string>\",\n  \"launchDate\": \"<dateTime>\",\n  \"_links\": {\n    \"voluptatea\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    },\n    \"laboris_73\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    },\n    \"dolore_a7b\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Book/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Book",
+												"v1"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"author\": \"<string>\",\n  \"id\": \"<long>\",\n  \"price\": \"<double>\",\n  \"title\": \"<string>\",\n  \"launchDate\": \"<dateTime>\",\n  \"_links\": {\n    \"voluptatea\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    },\n    \"laboris_73\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    },\n    \"dolore_a7b\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}"
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"author\": \"<string>\",\n  \"id\": \"<long>\",\n  \"price\": \"<double>\",\n  \"title\": \"<string>\",\n  \"launchDate\": \"<dateTime>\",\n  \"_links\": {\n    \"voluptatea\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    },\n    \"laboris_73\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    },\n    \"dolore_a7b\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Book/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Book",
+												"v1"
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"author\": \"<string>\",\n  \"id\": \"<long>\",\n  \"price\": \"<double>\",\n  \"title\": \"<string>\",\n  \"launchDate\": \"<dateTime>\",\n  \"_links\": {\n    \"voluptatea\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    },\n    \"laboris_73\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    },\n    \"dolore_a7b\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Book/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Book",
+												"v1"
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Internal Error",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"author\": \"<string>\",\n  \"id\": \"<long>\",\n  \"price\": \"<double>\",\n  \"title\": \"<string>\",\n  \"launchDate\": \"<dateTime>\",\n  \"_links\": {\n    \"voluptatea\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    },\n    \"laboris_73\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    },\n    \"dolore_a7b\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/Book/v1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Book",
+												"v1"
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						},
+						{
+							"name": "Finds a Book",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/Book/v1/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Book",
+										"v1",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<long>",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "Finds a Book"
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Book/v1/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Book",
+												"v1",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"author\": \"<string>\",\n  \"id\": \"<long>\",\n  \"price\": \"<double>\",\n  \"title\": \"<string>\",\n  \"launchDate\": \"<dateTime>\",\n  \"_links\": {\n    \"voluptatea\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    },\n    \"laboris_73\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    },\n    \"dolore_a7b\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}"
+								},
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Book/v1/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Book",
+												"v1",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Book/v1/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Book",
+												"v1",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Book/v1/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Book",
+												"v1",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Book/v1/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Book",
+												"v1",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Internal Error",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Book/v1/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Book",
+												"v1",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						},
+						{
+							"name": "Deletes a Book",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/Book/v1/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"Book",
+										"v1",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "<long>",
+											"description": "(Required) "
+										}
+									]
+								},
+								"description": "Deletes a Book"
+							},
+							"response": [
+								{
+									"name": "No Content",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Book/v1/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Book",
+												"v1",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "No Content",
+									"code": 204,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Bad Request",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Book/v1/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Book",
+												"v1",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Bad Request",
+									"code": 400,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Unauthorized",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Book/v1/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Book",
+												"v1",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Unauthorized",
+									"code": 401,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Not Found",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Book/v1/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Book",
+												"v1",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Not Found",
+									"code": 404,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								},
+								{
+									"name": "Internal Error",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/Book/v1/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"Book",
+												"v1",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "Internal Server Error",
+									"code": 500,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{}"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8080"
+		}
+	]
+}

@@ -1,25 +1,19 @@
-package com.hotmail.ma_adamo.mockito.services
+package com.hotmail.ma_adamo.unittests.mapper.mockito.services
 
-import br.com.erudio.unittests.mapper.mocks.MockPerson
 import com.hotmail.ma_adamo.exceptions.RequiredObjectIsNullException
 import com.hotmail.ma_adamo.repository.PersonRepository
 import com.hotmail.ma_adamo.services.PersonServices
+import com.hotmail.ma_adamo.unittests.mapper.mocks.MockPerson
+import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
-
-import org.junit.jupiter.api.Assertions.assertNotNull
-import org.junit.jupiter.api.Assertions.assertEquals
-import org.junit.jupiter.api.Assertions.assertTrue
-import org.junit.jupiter.api.Assertions.assertThrows
 import org.junit.jupiter.api.extension.ExtendWith
 import org.mockito.InjectMocks
 import org.mockito.Mock
-
 import org.mockito.Mockito.`when`
 import org.mockito.MockitoAnnotations
 import org.mockito.junit.jupiter.MockitoExtension
-import java.lang.Exception
-import java.util.Optional
+import java.util.*
 
 @ExtendWith(MockitoExtension::class)
 class PersonServicesTest {

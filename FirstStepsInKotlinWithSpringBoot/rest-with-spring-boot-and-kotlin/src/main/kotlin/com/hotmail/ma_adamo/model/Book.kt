@@ -5,7 +5,7 @@ import java.util.Date
 
 @Entity
 @Table(name = "books")
-class Book(
+data class Book(
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,11 +14,11 @@ class Book(
     @Column(nullable = false, length = 100)
     var author: String = "",
 
-    @Column(name = "launch_date", nullable = false, length = 100)
-    var launchDate: Date,
+    @Column(name = "launch_date")
+    var launchDate: Date? = null,
 
-    @Column(nullable = false, length = 100)
-    var price: Double,
+    @Column(nullable = false)
+    var price: Double = 0.0,
 
     @Column(nullable = false, length = 500)
     var title: String = ""
