@@ -1,4 +1,4 @@
-package br.com.erudio.unittests.mapper.mocks
+package com.hotmail.ma_adamo.unittests.mapper.mocks
 
 import com.hotmail.ma_adamo.data.vo.v1.PersonVO
 import com.hotmail.ma_adamo.model.Person
